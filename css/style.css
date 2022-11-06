@@ -1,0 +1,227 @@
+* {
+	/* !!!!!!!!!!! margin: 0 ; -- без auto  */
+	/* margin: 0 auto; */
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: "Kumbh Sans", sans-serif;
+	background-color: rgb(127, 101, 231);
+	background: linear-gradient(
+		0deg,
+		rgba(127, 101, 231, 1) 0%,
+		rgba(173, 104, 233, 1) 100%
+	);
+	background-position: center;
+	background-repeat: no-repeat;
+	font-size: 14px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	position: relative;
+	max-width: 100%;
+}
+
+.wrapper-img__cube {
+	/* border: 1px solid red; */
+	position: absolute;
+	z-index: 2;
+	left: -11%;
+	top: 44%;
+}
+
+/* .wrapper::before {
+	content: url("/images/illustration-box-desktop.svg");
+	position: absolute;
+	z-index: 2;
+	left: 359px;
+	top: 325px;
+} */
+
+.wrapper {
+	z-index: 1;
+	display: flex;
+	max-width: 975px;
+	background-color: white;
+	justify-content: center;
+	padding: 68px 50px 60px 0;
+	/* align-items: center; */
+	margin: 0 auto;
+	height: 545px;
+	overflow: hidden;
+	border-radius: 21.5px;
+	background-image: url("/images/bg-pattern-desktop.svg");
+	background-repeat: no-repeat;
+	background-position: -557px -266px;
+}
+
+.wrapper-svgfiles {
+	transform: translate(-90px, 20px);
+}
+
+.img-woman__dekstop {
+	width: 500px;
+	position: relative;
+}
+
+.wrapper-faq {
+	/*!!!!!!!!!!  добавил здесь flex */
+	width: 490px;
+	padding-right: 60px;
+	margin-left: 5px;
+}
+
+.wrapper-title {
+	font-size: 35px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+/* .wrapper-faq__lists {
+	
+} */
+.span-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 15px;
+	cursor: pointer;
+}
+
+ul {
+	padding: 0px;
+}
+
+.selected {
+	font-weight: bold;
+	transition: 0.1s ease-in-out;
+}
+
+.faq-lists__block {
+	list-style-type: none;
+	line-height: 1.1875em;
+	padding: 15px 0px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.arrow {
+	/* !!! add  */
+	transition: 0.4s ease-in-out;
+}
+
+.selected .arrow {
+	transform: rotate(180deg);
+	/* !!! remove */
+	/* transition: 0.4s ease-in-out; */
+}
+
+.lists-paragraph {
+	font-size: 12px;
+	/* margin-top: 10px; */
+	width: 330px;
+	/* !!!!!!!!!!!!!!!!!! padding убрал вообще */
+	/* padding-right: 100px; */
+	/* !!! add transition */
+	transition: 0.4s ease-in-out;
+	display: none;
+	padding: 7px 0px;
+	margin-bottom: -6px;
+}
+
+.lists-paragraph.selected {
+	display: block;
+	font-weight: 400;
+}
+
+.title-span:hover {
+	cursor: pointer;
+	color: orange;
+}
+
+.wrapper-woman {
+	display: none;
+}
+
+.wrapper-placertwo {
+	display: none;
+}
+
+@media screen and (max-width: 1200px) {
+	.wrapper {
+		flex-direction: column;
+		text-align: center;
+		padding: 2.5rem;
+		max-width: 490px;
+		justify-content: flex-end;
+		padding-bottom: 80px;
+	}
+	.lists-paragraph {
+		text-align: start;
+	}
+	.wrapper-faq {
+		padding: 0;
+		max-width: 400px;
+		height: 310px;
+	}
+	.wrapper-faq__lists {
+
+	}
+	.img-woman__dekstop {
+		display: none;
+	}
+	.wrapper-img__cube {
+		display: none;
+	}
+	.wrapper-woman {
+		display: block;
+		position: absolute;
+		width: 75%;
+		top: -124px;
+ 		left: 60px;
+		z-index: 1;
+	}
+	.wrapper-placertwo {
+		display: block;
+		width: 400px;
+		position: absolute;
+		top: 76px;
+		right: 41px;
+		z-index: 0;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.wrapper {
+		background-image: none;
+		padding: 1.5rem;
+		padding-bottom: 70px;
+	}
+	.wrapper-faq {
+		max-width: 300px;
+	}
+	.wrapper-woman {
+		top: -118px;
+		left: 45px;
+	}
+	.wrapper-placertwo {
+		top: 7px;
+		right: 0px;
+		width: 100%;
+	}
+	.lists-paragraph {
+		width: 280px;
+	}
+	.wrapper-faq {
+		height: 350px;
+	}
+}
+
