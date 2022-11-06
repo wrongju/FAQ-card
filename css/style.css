@@ -59,7 +59,7 @@ main {
 	height: 545px;
 	overflow: hidden;
 	border-radius: 21.5px;
-	background-image: url("/images/bg-pattern-desktop.svg");
+	background-image: url("../images/bg-pattern-desktop.svg");
 	background-repeat: no-repeat;
 	background-position: -557px -266px;
 }
